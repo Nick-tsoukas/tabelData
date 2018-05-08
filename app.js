@@ -38,22 +38,34 @@ $("#sub").on('click', function(e) {
     });
   });
 
+  // var template =
+  //               `
+  //               <tr>
+  //                 <td>${}</td>
+  //                 <td>${em}</td>
+  //                 <td>${em}</td>
+  //                 <td>${em}</td>
+  //                 <td>${em}</td>
+  //                 <td>${em}</td>
+  //               </tr>
+  //               `;
+
+// $("#myRow").append(database.name);
+
+database.ref().on("child_added", function(snapshot) {
+  console.log(snapshot.val().name)
   var template =
                 `
                 <tr>
-                  <td>${em}</td>
-                  <td>${em}</td>
-                  <td>${em}</td>
-                  <td>${em}</td>
-                  <td>${em}</td>
-                  <td>${em}</td>
+                  <td>${snapshot.val().name}</td>
+                  <td>${snapshot.val().name}</td>
+                  <td>${snapshot.val().name}</td>
+                  <td>${snapshot.val().name}</td>
+                  <td>${snapshot.val().name}</td>
+                  <td>${snapshot.val().name}</td>
                 </tr>
                 `;
-
-$("#myRow").append(template);
-
-database.ref().on("child_added", function(snapshot) {
-  console.log(snapshot.val())
+    $("#myRow").append(template);
 });
 
 
