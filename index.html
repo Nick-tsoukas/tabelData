@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<!-- collet info from form first
+orderByChild('dateAdded').limitToLast(1).on("child_added", function(snapshot) {
+
+})
+database.ref().push({
+   name: name,
+   some, some
+})
+ -->
+
+<body>
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Fluid jumbotron</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <table class="table table-striped margin_bottom">
+      <thead>
+        <tr>
+          <th scope="col">Emplyee name</th>
+          <th scope="col">Role</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">Months Worked</th>
+          <th scope="col">Monthly Rate</th>
+          <th scope="col">Total Billed</th>
+        </tr>
+      </thead>
+      <tbody id="myRow">
+        
+      </tbody>
+    </table>
+  </div>
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Employee Name</label>
+        <input type="text" class="form-control" id="em" aria-describedby="emailHelp" placeholder="Name">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Role</label>
+        <input type="text" class="form-control" id="role" placeholder="Role">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Start Date</label>
+        <input type="text" class="form-control" id="start_date" placeholder="Start Date">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Monthly Rate</label>
+        <input type="text" class="form-control" id="m_rate" placeholder="Monthly Rate">
+      </div>
+      <!-- <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div> -->
+      <button id="sub"type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+</body>
+
+</html>
